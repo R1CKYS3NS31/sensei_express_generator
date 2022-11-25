@@ -1,13 +1,15 @@
 var express = require('express');
 var router = express.Router();
 
+// controllers paths
+const getUser = require('../controllers/getUser');
+
+
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
-router.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+// router.get('/', function(req, res, next) {
+//   res.send('respond with a resource');
+// });
+router.get('/', getUser)
 
 // Respond to POST request on the root route (/user), the application’s home page:
 
